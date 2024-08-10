@@ -19,12 +19,17 @@ setTodos(prev => [newTodo, ...prev])
 }
 
 
+const DeleteTodo = (id) => {
+  setTodos(prev => prev.filter((todo) => todo.id !== id))
+}
+
+
 
   return (
     <div className="App">
 <Header AddNewPost={AddNewPost}/>
 <hr/>
-<Main todos={todos}/>
+<Main DeleteTodo={DeleteTodo} todos={todos}/>
 <hr/>
 <Footer/>
     </div>
