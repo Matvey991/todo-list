@@ -7,9 +7,9 @@ import { useState } from "react";
 function App() {
 
 const [todos, setTodos] = useState([{
-  title: 'f', 
+  title: 'Задача', 
   id: Date.now(),
-  status: false
+  status: true
 }])
 
 function AddNewPost(title)  {

@@ -20,8 +20,8 @@ const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
                 {i + 1}. {todo.title}
                 </span>
 
-  <button type="submit" onClick={() => DeleteTodo(todo.id)} className={'btn btn-danger d-flex flex-column align-items-center'}>Delete</button>
-  <button type="submit" onClick={() => ChangeTodoStatus(todo.id)} className={'btn btn-success'}>Done</button></li>
+  <button type="submit" onClick={() => DeleteTodo(todo.id)} className={'btn btn-danger d-flex flex-column align-items-center'}>Удалить</button>
+  <button type="submit" onClick={() => ChangeTodoStatus(todo.id)} className={'btn btn-success'}>Пометить</button></li>
         ))
     }
 </ul>

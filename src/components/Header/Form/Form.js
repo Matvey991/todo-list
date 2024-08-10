@@ -19,7 +19,7 @@ const Form = ({AddNewPost}) => {
     <input value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder='Title...' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
 
     </div>
-  <button type="submit" className="btn btn-primary">Add</button>
+  <button type="submit" className="btn btn-primary">Добавить</button>
 </form>
     );
   }
