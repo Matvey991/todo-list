@@ -3,6 +3,13 @@ import styles from './main.module.css'
 
 
 const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
+    if (!todos.length) {
+        return (
+            <div className={styles.mainHeading}>
+            <p>Список пуст...</p>
+            </div>
+        )
+    }
     return (
         <main>
 <ul className="list-group">
@@ -12,11 +19,9 @@ const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
                 <span className={`${todo.status ? styles.done : ''}`}>
                 {i + 1}. {todo.title}
                 </span>
-                <div className=''>
 
-                </div>
-  <button type="submit" onClick={() => DeleteTodo(todo.id)} className="btn btn-danger">Delete</button>
-  <button type="submit" onClick={() => ChangeTodoStatus(todo.id)} className="btn btn-success">Done</button></li>
+  <button type="submit" onClick={() => DeleteTodo(todo.id)} className={'btn btn-danger d-flex flex-column align-items-center'}>Delete</button>
+  <button type="submit" onClick={() => ChangeTodoStatus(todo.id)} className={'btn btn-success'}>Done</button></li>
         ))
     }
 </ul>

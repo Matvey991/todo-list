@@ -1,3 +1,22 @@
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
 .done {
     text-decoration: line-through;
+}
+
+.mainHeading {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainButton {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
 }

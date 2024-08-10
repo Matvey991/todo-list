@@ -6,7 +6,11 @@ import { useState } from "react";
 
 function App() {
 
-const [todos, setTodos] = useState([])
+const [todos, setTodos] = useState([{
+  title: 'f', 
+  id: Date.now(),
+  status: false
+}])
 
 function AddNewPost(title)  {
   const newTodo = {
@@ -31,8 +35,8 @@ const ChangeTodoStatus = (id) => {
       status: !todo.status
       }
     }
+    return todo
   }) 
-
   )
 }
 
