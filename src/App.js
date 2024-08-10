@@ -23,13 +23,24 @@ const DeleteTodo = (id) => {
   setTodos(prev => prev.filter((todo) => todo.id !== id))
 }
 
+const ChangeTodoStatus = (id) => {
+  setTodos(prev => prev.map((todo) => {
+    if (todo.id === id) {
+      return {
+        ...todo,
+      status: !todo.status
+      }
+    }
+  }) 
 
+  )
+}
 
   return (
     <div className="App">
 <Header AddNewPost={AddNewPost}/>
 <hr/>
-<Main DeleteTodo={DeleteTodo} todos={todos}/>
+<Main ChangeTodoStatus={ChangeTodoStatus} DeleteTodo={DeleteTodo} todos={todos}/>
 <hr/>
 <Footer/>
     </div>
