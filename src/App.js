@@ -40,13 +40,18 @@ const ChangeTodoStatus = (id) => {
   )
 }
 
+const DeleteAllTodos = () => {
+  setTodos([])
+}
+
+
   return (
     <div className="App">
 <Header AddNewPost={AddNewPost}/>
 <hr/>
 <Main ChangeTodoStatus={ChangeTodoStatus} DeleteTodo={DeleteTodo} todos={todos}/>
 <hr/>
-<Footer/>
+<Footer DeleteAllTodos={DeleteAllTodos} />
     </div>
   );
 }
