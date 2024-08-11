@@ -20,8 +20,8 @@ const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
         {i + 1}. {todo.title}
             </span>
             <div className=''>
-            <button type="submit" onClick={() => DeleteTodo(todo.id)} className={'btn mx-2 btn-danger'}>Удалить</button>
             <button type="submit" onClick={() => ChangeTodoStatus(todo.id)} className={'btn btn-success'}>Пометить</button>
+            <button type="submit" onClick={() => DeleteTodo(todo.id)} className={'btn mx-2 btn-danger'}>Удалить</button>
             </div>
         </li>
     ))
