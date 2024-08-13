@@ -1,11 +1,11 @@
 import React from "react";
-import Localsto from "./components/Localsto";
+import Ls from "./components/comp/localStorage";
 
 
 function App() {
 
   return (
-<Localsto/>
+<Ls/>
 );
 }
 

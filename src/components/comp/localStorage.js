@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header/Header';
-import Main from './Main/Main';
-import Footer from './Footer/Footer';
-import { TODOS_KEY_LS } from './content';
+import Header from '../Header/Header';
+import Main from '../Main/Main';
+import Footer from '../Footer/Footer';
+import { TODOS_KEY_LS } from '../content';
 
-const Localsto = () => {
+
+const Ls = () => {
     const [todos, setTodos] = useState([])
 
       useEffect(() => {
@@ -66,4 +67,4 @@ const Localsto = () => {
     );
 };
 
-export default Localsto;
+export default Ls;

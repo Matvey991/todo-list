@@ -3,7 +3,6 @@ import styles from './header.module.css'
 import Form from './Form/Form';
 
 const Header = ({AddNewPost}) => {
-    
 
     return (
         <>

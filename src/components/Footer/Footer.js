@@ -6,7 +6,7 @@ const Footer = ({DeleteAllTodos}) => {
         <footer>
             <div className={styles.footerDeleteAllTodos}>
 <button className={'btn btn-danger d-flex flex-column align-items-center'} onClick={() => DeleteAllTodos()}>
-Удалить
+Удалить все
 </button>
 </div>
         </footer>
