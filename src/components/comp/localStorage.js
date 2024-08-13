@@ -54,7 +54,6 @@ const Ls = () => {
       }
     return (
         <div>
-<div className="App">
       <div className="container py-5">
 <Header AddNewPost={AddNewPost}/>
 <hr/>
@@ -63,7 +62,6 @@ const Ls = () => {
 <Footer DeleteAllTodos={DeleteAllTodos} />
 </div>
     </div>
-        </div>
     );
 };
 
