@@ -25,7 +25,7 @@ const Ls = () => {
         const newTodo = {
           title, 
           id: Date.now(),
-          status: false
+          status: false,
         }
       
       setTodos(prev => [newTodo, ...prev])
@@ -52,6 +52,7 @@ const Ls = () => {
       const DeleteAllTodos = () => {
         setTodos([])
       }
+      
     return (
         <div>
       <div className="container py-5">
