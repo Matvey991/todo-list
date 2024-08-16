@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import { TODOS_KEY_LS } from '../content';
+import { TODOS_KEY_LS } from '../utils/constant';
 
 
 const Ls = () => {
-    const [todos, setTodos] = useState([])
 
+      const [todos, setTodos] = useState([])
+      
       useEffect(() => {
         const todosFromLS = localStorage.getItem(TODOS_KEY_LS)
         const prepareTodos = todosFromLS ? JSON.parse(todosFromLS) : []
