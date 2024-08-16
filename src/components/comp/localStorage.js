@@ -10,17 +10,18 @@ const Ls = () => {
       const [todos, setTodos] = useState([])
       
       useEffect(() => {
-        const todosFromLS = localStorage.getItem(TODOS_KEY_LS)
-        const prepareTodos = todosFromLS ? JSON.parse(todosFromLS) : []
-    
+        const FromData = localStorage.getItem(TODOS_KEY_LS)
+        const prepareTodos = FromData ? JSON.parse(FromData) : []
+
         if (prepareTodos.length) {
-        setTodos(prepareTodos)
+          setTodos(prepareTodos)
         }
       }, [])
-    
+
       useEffect(() => {
-    localStorage.setItem(TODOS_KEY_LS, JSON.stringify(todos))
+        localStorage.setItem(TODOS_KEY_LS, JSON.stringify(todos))
       }, [todos])
+      
       
       function AddNewPost(title)  {
         const newTodo = {
@@ -28,7 +29,8 @@ const Ls = () => {
           id: Date.now(),
           status: false,
         }
-      
+        
+        
       setTodos(prev => [newTodo, ...prev])
       }
       
