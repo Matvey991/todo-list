@@ -63,7 +63,7 @@ const Ls = () => {
 <hr/>
 <Main ChangeTodoStatus={ChangeTodoStatus} DeleteTodo={DeleteTodo} todos={todos}/>
 <hr/>
-<Footer DeleteAllTodos={DeleteAllTodos} />
+<Footer DeleteAllTodos={DeleteAllTodos} todos={todos} />
 </div>
     </div>
     );
