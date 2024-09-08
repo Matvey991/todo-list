@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import { TODOS_KEY_LS } from '../utils/constant';
 
 
-const Ls = () => {
+export const useTodos = () => {
 
       const [todos, setTodos] = useState([])
       
@@ -23,7 +23,7 @@ const Ls = () => {
       }, [todos])
       
       
-      function AddNewPost(title)  {
+      function AddNewTodo(title)  {
         const newTodo = {
           title, 
           id: Date.now(),
@@ -55,18 +55,11 @@ const Ls = () => {
       const DeleteAllTodos = () => {
         setTodos([])
       }
-      
-    return (
-        <div>
-      <div className="container py-5">
-<Header AddNewPost={AddNewPost}/>
-<hr/>
-<Main ChangeTodoStatus={ChangeTodoStatus} DeleteTodo={DeleteTodo} todos={todos}/>
-<hr/>
-<Footer DeleteAllTodos={DeleteAllTodos} todos={todos} />
-</div>
-    </div>
-    );
-};
-
-export default Ls;
+    return {
+      todos,
+      AddNewTodo,
+      DeleteTodo,
+      ChangeTodoStatus,
+      DeleteAllTodos
+    }
+    };
