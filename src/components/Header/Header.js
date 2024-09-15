@@ -1,11 +1,11 @@
 import React from 'react';
 import Form from './Form/Form';
 
-const Header = ({AddNewPost}) => {
+const Header = ({AddNewTodo}) => {
 
     return (
         <>
-    <Form AddNewPost={AddNewPost}/>
+    <Form AddNewPost={AddNewTodo}/>
         </>
     );
 };

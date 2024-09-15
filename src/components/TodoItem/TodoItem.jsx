@@ -1,4 +1,4 @@
-import todoItemStyles from "./styles.module.css"
+import todoItemStyles from "./styles.module.scss"
 
 export const TodoItem = ({id, title, status, i, ChangeTodoStatus, DeleteTodo}) => {
  return (
@@ -7,8 +7,8 @@ export const TodoItem = ({id, title, status, i, ChangeTodoStatus, DeleteTodo}) =
     >
         <span 
         className={`d-flex align-items-center 
-        ${status ? todoItemStyles.done : ''}`}
-        >
+            ${status ? todoItemStyles.done : ''}`}
+            >
             {i + 1}. {title}
             </span>
         <div>
@@ -28,7 +28,6 @@ export const TodoItem = ({id, title, status, i, ChangeTodoStatus, DeleteTodo}) =
             </button>
      
          </div> 
-           
     </li>
  )   
 }

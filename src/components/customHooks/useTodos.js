@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../Header/Header';
-import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
+import { useEffect, useState } from 'react';
 import { TODOS_KEY_LS } from '../utils/constant';
 
 
@@ -15,7 +12,7 @@ export const useTodos = () => {
 
         if (prepareTodos.length) {
           setTodos(prepareTodos)
-        }
+        } 
       }, [])
 
       useEffect(() => {
@@ -23,7 +20,7 @@ export const useTodos = () => {
       }, [todos])
       
       
-      function AddNewTodo(title)  {
+      const AddNewTodo = (title) =>  {
         const newTodo = {
           title, 
           id: Date.now(),
@@ -55,6 +52,8 @@ export const useTodos = () => {
       const DeleteAllTodos = () => {
         setTodos([])
       }
+
+
     return {
       todos,
       AddNewTodo,
