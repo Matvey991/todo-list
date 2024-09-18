@@ -1,6 +1,7 @@
 import todoItemStyles from "./styles.module.scss"
 
-export const TodoItem = ({id, title, status, i, ChangeTodoStatus, DeleteTodo}) => {
+export const TodoItem = ( {id, title, status, i, DeleteTodo, ChangeTodoStatus} ) => {
+    
  return (
     <li 
     className="list-group-item d-flex justify-content-between"

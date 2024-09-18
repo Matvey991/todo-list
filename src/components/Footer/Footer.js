@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from "react";
 
-export const Footer = ({DeleteAllTodos, todos}) => {
+export const Footer = React.memo(( {todos, DeleteAllTodos} ) => { 
+    
     return (
         <footer className="d-flex flex-column align-items-center">
     <button 
@@ -10,5 +11,5 @@ export const Footer = ({DeleteAllTodos, todos}) => {
             Удалить все
     </button>
         </footer>
-    );
-};
+    )
+})

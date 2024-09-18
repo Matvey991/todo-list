@@ -1,8 +1,7 @@
 import { TodoItem } from "../TodoItem/TodoItem"
 
-
-
-export const TodoList = ({todos, ChangeTodoStatus, DeleteTodo}) => {
+export const TodoList = ({todos, ChangeTodoStatus, DeleteTodo} ) => {
+    
     return (
     <ul className="list-group">
         {
@@ -11,7 +10,7 @@ export const TodoList = ({todos, ChangeTodoStatus, DeleteTodo}) => {
         key={todo.id} 
         {...todo} 
         i={i} 
-        ChangeTodoStatus={ChangeTodoStatus} 
+        ChangeTodoStatus={ChangeTodoStatus}
         DeleteTodo={DeleteTodo}
         />)
         }

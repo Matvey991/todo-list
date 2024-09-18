@@ -1,9 +1,8 @@
 import React from 'react';
 import { TodoList } from '../TodoList/Todolist';
 
-
-
-const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
+export const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
+    
     if (!todos.length) {
         return (
             <p>Список пуст...</p>
@@ -17,4 +16,3 @@ const Main = ({todos, ChangeTodoStatus, DeleteTodo}) => {
         </main>
     );
 }
-export default Main;

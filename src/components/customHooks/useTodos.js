@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { TODOS_KEY_LS } from '../utils/constant';
 
 
@@ -49,9 +49,9 @@ export const useTodos = () => {
         )
       }
       
-      const DeleteAllTodos = () => {
+      const DeleteAllTodos = useCallback(() => {
         setTodos([])
-      }
+      }, [])
 
 
     return {
