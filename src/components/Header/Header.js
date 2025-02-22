@@ -1,26 +1,57 @@
 import React, { useState } from "react";
 import Form from "./Form/Form";
 import { Modal } from "../Modal/Modal";
+import { Drawer } from "../Drawer/Drawer";
 
 export const Header = ({ AddNewTodo }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openHandler = () => {
+    setIsOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeHandler = () => {
+    setIsOpen(false);
   };
 
   return (
     <header className="d-flex justify-content-center">
-      <button onClick={openModal} type="submit" className="btn btn-primary">
-        Open modal
-      </button>
-      <Modal closeHandler={closeModal} isOpen={isModalOpen}>
-        <Form closeHandler={closeModal} AddNewTodo={AddNewTodo} />
-      </Modal>
+      {isMobile ? (
+        <>
+          <button
+            onClick={openHandler}
+            type="submit"
+            className="btn btn-primary"
+          >
+            Open Drawer
+          </button>
+          <Drawer isOpen={isOpen} closeHandler={closeHandler}>
+            <Form
+              AddNewTodo={AddNewTodo}
+              closeHandler={closeHandler}
+              width={"100%"}
+            />
+          </Drawer>
+        </>
+      ) : (
+        <>
+          <button
+            onClick={openHandler}
+            type="submit"
+            className="btn btn-primary"
+          >
+            Open modal
+          </button>
+          <Modal closeHandler={closeHandler} isOpen={isOpen}>
+            <Form
+              width={"100%"}
+              closeHandler={closeHandler}
+              AddNewTodo={AddNewTodo}
+            />
+          </Modal>
+        </>
+      )}
     </header>
   );
 };
