@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cls from "./styles.module.scss";
 
-export const Form = ({ AddNewTodo, closeHandler, width, height }) => {
+export const Form = ({ AddNewTodo, closeHandler }) => {
   const [input, setInput] = useState("");
 
   const addSubmit = (e) => {
@@ -13,19 +13,13 @@ export const Form = ({ AddNewTodo, closeHandler, width, height }) => {
       closeHandler();
     }
   };
-
-  const styles = {
-    width,
-    height,
-  };
-
   return (
     <form
       onSubmit={addSubmit}
       className={`d-flex flex-column align-items-center ${cls.wr}`}
     >
       <p className="text-center mb-3">Create todo</p>
-      <div style={styles} className="mb-3">
+      <div className="mb-3">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -36,7 +30,7 @@ export const Form = ({ AddNewTodo, closeHandler, width, height }) => {
           aria-describedby="emailHelp"
         />
       </div>
-      <button style={styles} type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary">
         Добавить
       </button>
     </form>
