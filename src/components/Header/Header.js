@@ -45,6 +45,7 @@ export const Header = ({ AddNewTodo }) => {
           </button>
           <Modal closeHandler={closeHandler} isOpen={isOpen}>
             <Form
+              height={"100%"}
               width={"100%"}
               closeHandler={closeHandler}
               AddNewTodo={AddNewTodo}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cls from "./styles.module.scss";
 
-export const Form = ({ AddNewTodo, closeHandler, width }) => {
+export const Form = ({ AddNewTodo, closeHandler, width, height }) => {
   const [input, setInput] = useState("");
 
   const addSubmit = (e) => {
@@ -16,6 +16,7 @@ export const Form = ({ AddNewTodo, closeHandler, width }) => {
 
   const styles = {
     width,
+    height,
   };
 
   return (
